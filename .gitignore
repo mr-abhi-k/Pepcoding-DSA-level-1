@@ -16,6 +16,7 @@ bin/
 *.iml
 *.ipr
 *.class
+*.exe
 
 ### NetBeans ###
 nbproject/private/
