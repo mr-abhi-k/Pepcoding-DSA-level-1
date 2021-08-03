@@ -15,7 +15,7 @@ vector<string> gmpwithjumps(int sr,int sc,int dr,int dc)
         {
            vector<string> hori =gmpwithjumps(sr,sc+jump,dr,dc);
             for(int i=0;i<hori.size();i++)
-            ans.push_back("h"+jump+hori[i]);
+            ans.push_back("h"+to_string(jump)+hori[i]);
         }
         
         //for vertical direction
@@ -23,7 +23,7 @@ vector<string> gmpwithjumps(int sr,int sc,int dr,int dc)
         {
          vector<string> vert =gmpwithjumps(sr,sc+jump,dr,dc);
             for(int i=0;i<vert.size();i++)
-            ans.push_back("v"+jump+vert[i]);
+            ans.push_back("v"+to_string(jump)+vert[i]);
         }
         
         //for diagonal
@@ -31,10 +31,8 @@ vector<string> gmpwithjumps(int sr,int sc,int dr,int dc)
         {
           vector<string> diag =gmpwithjumps(sr,sc+jump,dr,dc);
             for(int i=0;i<diag.size();i++)
-            ans.push_back("h"+jump+diag[i]);
+            ans.push_back("d"+to_string(jump)+diag[i]);
         }
-        
-
         return ans;
 }
 
